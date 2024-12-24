@@ -102,22 +102,6 @@ a {
     margin-bottom: 2rem;
 }
 
-.button {
-    display: inline-block;
-    outline: none;
-    border: none;
-    font-family: var(--ff-poppins);
-    background-color: var(--first-color);
-    color: var(--body-color);
-    font-weight: var(--font-semi-bold);
-    padding: 1rem 1.5rem;
-    transition: box-shadow .4s;
-  }
-  
-  .button:hover {
-    box-shadow: 0 4px 32px hsla(230, 72%, 32%, .4);
-  }
-
 @media screen and (max-width: 640px) {
     .section {
         margin-block: 2rem;
@@ -148,8 +132,12 @@ a {
     font-size: 1.5rem;
     font-family: var(--ff-merriweather);
     font-weight: bold;
-    color: var(--yellow-color);
+    color: var(--white-color);
     cursor: pointer;
+}
+
+.menu__logo:hover {
+    color: var(--yellow-color);
 }
 
 .menu__row--lg {
@@ -186,7 +174,11 @@ a {
 }
 
 .menu__toggle i {
-  color: var(--yellow-color);
+  color: var(--white-color);
+}
+
+.menu__toggle i:hover {
+    color: var(--yellow-color);
 }
 
 .menu__list {
