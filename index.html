@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <!-- configs -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="assets/styles/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/styles/app.css" />
+
+    <!-- seo -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <title> Lumadin </title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+
+        <!-- desktop menu -->
+        <div class="menu" id="menu">
+            <div class="menu__container container">
+                <div class="menu__content">
+
+                    <a asp-controller="Home" asp-action="Index" class="menu__logo">Lumadin</a>
+
+                    <ul class="menu__row grid menu__row--lg">
+                        <li class="menu__col menu__col--1">
+                            <section class="menu__data">
+                                <h5>General</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">About</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Contact us</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Signup/Signin</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--2">
+                            <section class="menu__data">
+                                <h5>Color</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Color</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--3">
+                            <section class="menu__data">
+                                <h5>VFX</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">VFX</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--4">
+                            <section class="menu__data">
+                                <h5>Tools</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Market</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Education</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--5">
+                            <section class="menu__data">
+                                <h5>Design</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">StoryBoard</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">StoryReels</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">AI</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Articles</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+                    </ul>
+
+                    <div class="menu__toggle">
+                        <i class="ri-layout-grid-fill" id="menu-icon"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- mobile menu -->
+    <ul class="menu__row grid menu__row--sm">
+        <li class="menu__col menu__col--1">
+            <section class="menu__data">
+                <h5>Lumadin Inc.</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--2">
+            <section class="menu__data">
+                <h5>TV</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">VFX</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Color</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--3">
+            <section class="menu__data">
+                <h5>Feature film</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Film production</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Behind the scenes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--4">
+            <section class="menu__data">
+                <h5>Advertisement</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Clips</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Character and logo design</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Motion graphics</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--5">
+            <section class="menu__data">
+                <h5>Cooperation</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Hiring</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+    </ul>
+
+    <!-- main -->
+    <main class="main" id="main">
+
+        <!-- home -->
+        <div class="home">
+            <section class="home__vfx">
+                <h2 class="home__title">
+                    <a href="#" class="home__link">VFX</a>
+                </h2>
+
+                <video id="home-vfx" src="assets/videos/vfx.mp4" muted loop class="home__video"></video>
+                <div class="home__overlay home__overlay--vfx"></div>
+            </section>
+            <section class="home__color">
+                <h2 class="home__title">
+                    <a href="#" class="home__link">Color</a>
+                </h2>
+
+                <video id="home-color" src="assets/videos/color.mp4" muted loop class="home__video"></video>
+                <div class="home__overlay home__overlay--color"></div>
+            </section>
+        </div>
+
+        <!-- work -->
+        <section class="work section" id="work">
+            <header class="work__header">
+                <h2 class="section__title">
+                    Work Books
+                </h2>
+            </header>
+
+            <div class="work__container container">
+                <div class="work__swiper swiper">
+                    <ul class="swiper-wrapper">
+
+                        <li class="work__item swiper-slide">
+                            <a href="#" class="work__link">
+                                <div class="work__card">
+                                    <div class="work__info">
+                                        <div class="work__data">
+                                            <h4 class="work__title">Animation</h4>
+                                            <p class="work__description">Crafting precise works and fostering
+                                                creativity, EEFA Studio's production process draws from global standards
+                                                and indust</p>
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/imgs/projects/animation-cover-1.webp" class="work__img"
+                                        alt="animation" />
+                                </div>
+
+                                <div class="work__more">
+                                    READ MORE
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="work__item swiper-slide">
+                            <a href="#" class="work__link">
+                                <div class="work__card">
+                                    <div class="work__info">
+                                        <div class="work__data">
+                                            <h4 class="work__title">Animation</h4>
+                                            <p class="work__description">Crafting precise works and fostering
+                                                creativity, EEFA Studio's production process draws from global standards
+                                                and indust</p>
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/imgs/projects/education.webp" class="work__img" alt="animation" />
+                                </div>
+
+                                <div class="work__more">
+                                    READ MORE
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="work__item swiper-slide">
+                            <a href="#" class="work__link">
+                                <div class="work__card">
+                                    <div class="work__info">
+                                        <div class="work__data">
+                                            <h4 class="work__title">Animation</h4>
+                                            <p class="work__description">Crafting precise works and fostering
+                                                creativity, EEFA Studio's production process draws from global standards
+                                                and indust</p>
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/imgs/projects/for-post-production-cover-1.webp" class="work__img"
+                                        alt="animation" />
+                                </div>
+
+                                <div class="work__more">
+                                    READ MORE
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="work__item swiper-slide">
+                            <a href="#" class="work__link">
+                                <div class="work__card">
+                                    <div class="work__info">
+                                        <div class="work__data">
+                                            <h4 class="work__title">Animation</h4>
+                                            <p class="work__description">Crafting precise works and fostering
+                                                creativity, EEFA Studio's production process draws from global standards
+                                                and indust</p>
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/imgs/projects/advertisement.webp" class="work__img"
+                                        alt="animation" />
+                                </div>
+
+                                <div class="work__more">
+                                    READ MORE
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="work__item swiper-slide">
+                            <a href="#" class="work__link">
+                                <div class="work__card">
+                                    <div class="work__info">
+                                        <div class="work__data">
+                                            <h4 class="work__title">Animation</h4>
+                                            <p class="work__description">Crafting precise works and fostering
+                                                creativity, EEFA Studio's production process draws from global standards
+                                                and indust</p>
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/imgs/projects/advertisement.webp" class="work__img"
+                                        alt="animation" />
+                                </div>
+
+                                <div class="work__more">
+                                    READ MORE
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cover section" id="cover">
+            <header class="cover__header">
+                <h2 class="section__title">
+                    Work Books
+                </h2>
+            </header>
+
+            <div class="cover__container container">
+                <div class="cover__content">
+                    <span></span>
+
+                    <img src="assets/imgs/projects/hard-shell-bg.webp" alt="" class="swiper-bg-img" />
+
+                    <div class="swiper cover__swiper">
+                        <div class="swiper-wrapper cover__wrapper">
+                            <figure class="swiper-slide cover__slide" data-background-image="hard-shell-bg.webp">
+                                <img src="assets/imgs/projects/hard-shell-cover.webp" alt="hard shell cover"
+                                    class="swiper__img" />
+                                <figcaption>hard shell</figcaption>
+                            </figure>
+                            <figure class="swiper-slide cover__slide" data-background-image="hero-bg.webp">
+                                <img src="assets/imgs/projects/hero-cover.jpg" alt="hero cover" class="swiper__img" />
+                                <figcaption>hero</figcaption>
+                            </figure>
+                            <figure class="swiper-slide cover__slide" data-background-image="khatoon-bg.webp">
+                                <img src="assets/imgs/projects/khatoon-cover.webp" alt="khatoon cover"
+                                    class="swiper__img" />
+                                <figcaption>khatoon</figcaption>
+                            </figure>
+                            <figure class="swiper-slide cover__slide" data-background-image="viper-of-tehran-bg.webp">
+                                <img src="assets/imgs/projects/viper-of-tehran-cover.webp" alt="viper of tehran cover"
+                                    class="swiper__img" />
+                                <figcaption>viper of tehran</figcaption>
+                            </figure>
+                            <figure class="swiper-slide cover__slide" data-background-image="world-war-iii-bg.webp">
+                                <img src="assets/imgs/projects/world-war-iii-cover.webp" alt="world war iii cover"
+                                    class="swiper__img" />
+                                <figcaption>world war iii</figcaption>
+                            </figure>
+                            <figure class="swiper-slide cover__slide" data-background-image="zolf-bg.webp">
+                                <img src="assets/imgs/projects/zolf-cover.webp" alt="zolf cover" class="swiper__img" />
+                                <figcaption>zolf</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer section" id="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <figure>
+                    <img src="assets/imgs/projects/EEFA-logo-1.webp" alt="" class="footer__logo" />
+                </figure>
+                <p>When we dream on boundless imaginative journeys of our mind, beyond verbal descriptions, the first
+                    thing we
+                    aim for is to depict our dreams visually for others. Since 2009, EEFA have chosen the medium of
+                    cinema and
+                    television to showcase the extraordinary dreams of fellow artists through the use of art and
+                    technology in
+                    visual effects (VFX).</p>
+                <p>The combination of art with technology has brought an achievement where creative artists are less
+                    constrained
+                    in portraying their imaginative dreams. Our perpetual concern in EEFA is the fusion of creative and
+                    expert
+                    artists with advance technologies, aiming to empower the creation of photorealistic scenes. By
+                    integrating
+                    real footage and computer-generated images using professional techniques, our goal is to maximize
+                    the
+                    potential for crafting high-end or seemingly impossible scenes.</p>
+                <p>Shamim Bulding, No.1, Abedi Tehrani Alley, Ba Honar Street, Tajrish, Tehran</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+</body>
+
+</html>
