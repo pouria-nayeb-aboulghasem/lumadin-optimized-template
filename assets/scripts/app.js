@@ -101,3 +101,23 @@ swiperCoverflow.on('slideChange', function (e) {
         }
     });
 });
+
+// news
+let swiperNews = new Swiper('.news__swiper', {
+    loop: true,
+    spaceBetween: 10,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+
+    breakpoints: {
+        650: {
+            slidesPerView: 2,
+            centeredSlides: false
+        },
+        1100: {
+            slidesPerView: 3,
+            centeredSlides: false
+        }
+    }
+});
