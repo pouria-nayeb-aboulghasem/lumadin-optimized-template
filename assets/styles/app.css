@@ -6,7 +6,7 @@
 
     --secondary-color: #ffd700;
     --text-color: #f1f1f1;
-    --body-color: #1f2937;
+    --body-color: hsl(215, 28%, 8%);
     --bg-color: hsl(215deg 20.6% 20.36% / 75%);
     --white-color: #fff;
     --black-color: #000;
@@ -479,8 +479,8 @@ a {
 .work__more {
     position: absolute;
     z-index: 100;
-    right: -20px;
-    bottom: 0;
+    right: -27px;
+    bottom: -8px;
     width: 60%;
     display: flex;
     align-items: center;
@@ -489,7 +489,7 @@ a {
     padding: 15px 30px 15px 15px;
     gap: 10px;
     transition: all 0.3s;
-    font-size: 0.65rem;
+    font-size: 0.57rem;
 }
 
 .work__more i {
@@ -504,7 +504,6 @@ a {
     margin-bottom: 3px;
 }
 
-    
 .work__data {
     display: inline-block;
     width: 200px;
@@ -570,10 +569,36 @@ a {
     color: var(--body-color);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1367px) {
+    .work__data {
+        width: 300px;
+    }
 
+    .work__link:hover .work__data {
+        height: 250px;
+    }
+
+    .work__more {
+        font-size: 1rem;
+    }
+
+    .work__title {
+        font-size: 2.5rem;
+    }
+
+    .work__description {
+        font-size: 1.25rem;
+        -webkit-line-clamp: 4;
+    }
+}
+
+@media screen and (max-width: 1100px) {
     .work__item {
         max-width: 256px;
+    }
+
+    .work__data {
+        width: 160px;
     }
 
     .work__title {
@@ -592,14 +617,13 @@ a {
 
     .work__more {
         white-space: nowrap;
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         bottom: -0.4rem;
-        right: -1.5rem
+        right: -1.75rem
     }
 
     .work__link:hover .work__data {
-        height: 200px;
-        opacity: 1;
+        height: 160px;
     }
 
     .swiper-button-prev,
@@ -904,7 +928,9 @@ a {
 }
 
 .news__date {
-
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.75;
 }
 
 .news__description {
@@ -932,6 +958,26 @@ a {
 
 .news__item:hover .news__link i {
     transform: translateX(0.25rem);
+}
+
+@media screen and (min-width: 1367px) {
+    .news__title {
+        width: 350px;
+        font-size: 2rem;
+    }
+
+    .news__description {
+        width: 350px;
+        font-size: 1.35rem;
+    }
+
+    .news__date {
+        font-size: 0.95rem;
+    }
+
+    .news__item {
+        height: 400px;
+    }
 }
 
 /* footer */

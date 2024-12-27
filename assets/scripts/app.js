@@ -60,6 +60,10 @@ let swiperFeatured = new Swiper('.work__swiper', {
         1100: {
             slidesPerView: 4,
             centeredSlides: false
+        },
+        1367: {
+            slidesPerView: 3,
+            centeredSlides: false
         }
     }
 });
