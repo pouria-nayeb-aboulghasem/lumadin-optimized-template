@@ -672,18 +672,6 @@ a {
     mask-size: contain;
 }
 
-@media screen and (max-width: 768px) {
-    .cover__container {
-        height: 65vh;
-    }
-
-    .swiper-bg-img {
-        top: 25%;
-        width: 100%;
-        height: auto;
-    }
-}
-
 .cover__swiper {
     width: 100%;
     max-width: 1100px;
@@ -698,7 +686,7 @@ a {
 .cover__slide {
     background-position: center;
     background-size: cover;
-    width: 225px;
+    width: 250px;
     height: auto;
     border-radius: 8px;
     overflow: hidden;
@@ -715,6 +703,24 @@ a {
     opacity: 0.75;
     filter: blur(5px);
     scale: 0.75;
+}
+
+@media screen and (max-width: 768px) {
+
+    .cover__container {
+        height: 65vh;
+    }
+
+    .swiper-bg-img {
+        top: 25%;
+        width: 100%;
+        height: auto;
+        mask-position: top;
+    }
+    
+    .cover__slide {
+        width: 190px;
+    }
 }
 
 /* about */
