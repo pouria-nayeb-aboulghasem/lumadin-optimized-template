@@ -1142,7 +1142,6 @@ a {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    padding: 10px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
@@ -1291,15 +1290,18 @@ bottom: 5%;
 @media screen and (max-width: 768px) {
     .swiper-button-prev, .swiper-button-next {
         right: initial;
+        top:initial;
         transform: translateX(-50%);
     }
     
     .swiper-button-prev {
         left: 45%;
+        bottom: 2.5rem;
     }
     
     .swiper-button-next {
         left: calc(45% + 4rem);
+        bottom: 2.5rem;
     }
 }
 
