@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <!-- configs -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="assets/styles/libs/swiper-bundle-vfx.min.css" />
+    <link rel="stylesheet" href="assets/styles/app.css" />
+
+    <!-- seo -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <title> VFX </title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header" id="header">
+
+        <!-- desktop menu -->
+        <div class="menu" id="menu">
+            <div class="menu__container container">
+                <div class="menu__content">
+
+                    <a asp-controller="Home" asp-action="Index" class="menu__logo">Lumadin</a>
+
+                    <ul class="menu__row grid menu__row--lg">
+                        <li class="menu__col menu__col--1">
+                            <section class="menu__data">
+                                <h5>General</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">About</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Contact us</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Signup/Signin</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--2">
+                            <section class="menu__data">
+                                <h5>Color</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Color</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--3">
+                            <section class="menu__data">
+                                <h5>VFX</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">VFX</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--4">
+                            <section class="menu__data">
+                                <h5>Tools</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Market</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Education</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--5">
+                            <section class="menu__data">
+                                <h5>Design</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">StoryBoard</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">StoryReels</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">AI</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Articles</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+                    </ul>
+
+                    <div class="menu__toggle">
+                        <i class="ri-layout-grid-fill" id="menu-icon"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- mobile menu -->
+    <ul class="menu__row grid menu__row--sm">
+        <li class="menu__col menu__col--1">
+            <section class="menu__data">
+                <h5>Lumadin Inc.</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--2">
+            <section class="menu__data">
+                <h5>TV</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">VFX</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Color</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--3">
+            <section class="menu__data">
+                <h5>Feature film</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Film production</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Behind the scenes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--4">
+            <section class="menu__data">
+                <h5>Advertisement</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Clips</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Character and logo design</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Motion graphics</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--5">
+            <section class="menu__data">
+                <h5>Cooperation</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Hiring</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+    </ul>
+
+    <main id="main" class="main">
+
+        <!-- vfx -->
+        <div class="vfx">
+            <div class="vfx__container container">
+                <div class="vfx__content">
+                    <div class="vfx__swiper swiper">
+                        <div class="vfx__wrapper swiper-wrapper">
+
+                            <div class="vfx__slide swiper-slide">
+                                <h2 class="vfx__title">Animation</h2>
+                                <div class="vfx__figure">
+                                    <div class="vfx__compare">
+                                        <div class="vfx__part">
+                                            <img src="assets/imgs/projects/advertisement.webp" class="vfx__img" />
+                                        </div>
+                                        <div class="vfx__part vfx__part--overlay">
+                                            <img src="assets/imgs/projects/education.webp" class="vfx__img" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vfx__data">
+                                    <p class="vfx__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Rem
+                                        sit
+                                        est praesentium modi consequatur aspernatur</p>
+                                </div>
+                            </div>
+                            <div class="vfx__slide swiper-slide">
+                                <h2 class="vfx__title">VFX</h2>
+                                <div class="vfx__compare">
+                                    <div class="vfx__part">
+                                        <img src="assets/imgs/projects/animation-cover-1.webp" class="vfx__img" />
+                                    </div>
+                                    <div class="vfx__part vfx__part--overlay">
+                                        <img src="assets/imgs/projects/production.webp" class="vfx__img" />
+                                    </div>
+                                </div>
+                                <div class="vfx__data">
+                                    <p class="vfx__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Rem
+                                        sit
+                                        est praesentium modi consequatur aspernatur illo rerum odio aperiam. Veniam
+                                        quidem
+                                        libero maxime qui, odio soluta corporis asperiores earum nulla?</p>
+                                </div>
+                            </div>
+                            <div class="vfx__slide swiper-slide">
+                                <h2 class="vfx__title">Education</h2>
+                                <div class="vfx__compare">
+                                    <div class="vfx__part">
+                                        <img src="assets/imgs/projects/animation-cover-1.webp" class="vfx__img" />
+                                    </div>
+                                    <div class="vfx__part vfx__part--overlay">
+                                        <img src="assets/imgs/projects/education.webp" class="vfx__img" />
+                                    </div>
+                                </div>
+                                <div class="vfx__data">
+                                    <p class="vfx__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Rem
+                                        sit
+                                        est praesentium modi consequatur aspernatur illo rerum odio aperiam. Veniam
+                                        quidem
+                                        libero maxime qui, odio soluta corporis asperiores earum nulla?</p>
+                                </div>
+                            </div>
+                            <div class="vfx__slide swiper-slide">
+                                <h2 class="vfx__title">Movie</h2>
+                                <div class="vfx__compare">
+                                    <div class="vfx__part">
+                                        <img src="assets/imgs/projects/advertisement.webp" class="vfx__img" />
+                                    </div>
+                                    <div class="vfx__part vfx__part--overlay">
+                                        <img src="assets/imgs/projects/for-post-production-cover-1.webp"
+                                            class="vfx__img" />
+                                    </div>
+                                </div>
+                                <div class="vfx__data">
+                                    <p class="vfx__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Rem
+                                        sit
+                                        est praesentium modi consequatur aspernatur illo rerum odio aperiam. Veniam
+                                        quidem
+                                        libero maxime qui, odio soluta corporis asperiores earum nulla?</p>
+                                </div>
+                            </div>
+                            <div class="vfx__slide swiper-slide">
+                                <h2 class="vfx__title">Design</h2>
+                                <div class="vfx__compare">
+                                    <div class="vfx__part">
+                                        <img src="assets/imgs/projects/advertisement.webp" class="vfx__img" />
+                                    </div>
+                                    <div class="vfx__part vfx__part--overlay">
+                                        <img src="assets/imgs/projects/education.webp" class="vfx__img" />
+                                    </div>
+                                </div>
+                                <div class="vfx__data">
+                                    <p class="vfx__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Rem
+                                        sit
+                                        est praesentium modi consequatur aspernatur illo rerum odio aperiam. Veniam
+                                        quidem
+                                        libero maxime qui, odio soluta corporis asperiores earum nulla?</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+                    </div>
+
+                    <ul class="vfx__list">
+                        <li class="vfx__item vfx__item--1"></li>
+                        <li class="vfx__item vfx__item--2"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                All rights reserved by <a href="#" class="footer__link">Lumadin</a> studio.
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="assets/scripts/libs/swiper-bundle-vfx.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+    <script>
+        const vfxSwiper = new Swiper(".vfx__swiper", {
+            effect: "coverflow",
+            speed: 1000,
+            loop: true,
+            grabCursor: false,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 900,
+            allowTouchMove: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false,
+            // },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            mousewheel: {
+                invert: false,
+                thresholdDelta: 50,
+                sensitivity: 1
+            }
+        });
+    </script>
+    <script>
+        function initComparisons() {
+            var x, i;
+            /*find all elements with an "overlay" class:*/
+            x = document.getElementsByClassName("vfx__part--overlay");
+            for (i = 0; i < x.length; i++) {
+                /*once for each "overlay" element:
+                pass the "overlay" element as a parameter when executing the compareImages function:*/
+                compareImages(x[i]);
+            }
+            function compareImages(img) {
+                var slider, img, clicked = 0, w, h;
+                /*get the width and height of the img element*/
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                /*set the width of the img element to 50%:*/
+                img.style.width = (w / 2) + "px";
+                /*create slider:*/
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider");
+                /*insert slider*/
+                img.parentElement.insertBefore(slider, img);
+                /*position the slider in the middle:*/
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                /*execute a function when the mouse button is pressed:*/
+                slider.addEventListener("mousedown", slideReady);
+                /*and another function when the mouse button is released:*/
+                window.addEventListener("mouseup", slideFinish);
+                /*or touched (for touch screens:*/
+                slider.addEventListener("touchstart", slideReady);
+                /*and released (for touch screens:*/
+                window.addEventListener("touchend", slideFinish);
+                function slideReady(e) {
+                    /*prevent any other actions that may occur when moving over the image:*/
+                    e.preventDefault();
+                    /*the slider is now clicked and ready to move:*/
+                    clicked = 1;
+                    /*execute a function when the slider is moved:*/
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                }
+                function slideFinish() {
+                    /*the slider is no longer clicked:*/
+                    clicked = 0;
+                }
+                function slideMove(e) {
+                    var pos;
+                    /*if the slider is no longer clicked, exit this function:*/
+                    if (clicked == 0) return false;
+                    /*get the cursor's x position:*/
+                    pos = getCursorPos(e)
+                    /*prevent the slider from being positioned outside the image:*/
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    /*execute a function that will resize the overlay image according to the cursor:*/
+                    slide(pos);
+                }
+                function getCursorPos(e) {
+                    var a, x = 0;
+                    e = (e.changedTouches) ? e.changedTouches[0] : e;
+                    /*get the x positions of the image:*/
+                    a = img.getBoundingClientRect();
+                    /*calculate the cursor's x coordinate, relative to the image:*/
+                    x = e.pageX - a.left;
+                    /*consider any page scrolling:*/
+                    x = x - window.pageXOffset;
+                    return x;
+                }
+                function slide(x) {
+                    /*resize the image:*/
+                    img.style.width = x + "px";
+                    /*position the slider:*/
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+            }
+        }
+
+        initComparisons();
+    </script>
+</body>
+
+</html>
