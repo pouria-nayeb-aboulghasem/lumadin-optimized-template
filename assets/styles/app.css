@@ -1292,16 +1292,15 @@ bottom: 5%;
         right: initial;
         top:initial;
         transform: translateX(-50%);
+        bottom: 15%;
     }
     
     .swiper-button-prev {
         left: 45%;
-        bottom: 10%;
     }
     
     .swiper-button-next {
         left: calc(45% + 4rem);
-        bottom: 10%;
     }
 }
 
