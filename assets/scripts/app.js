@@ -23,26 +23,6 @@ const bgHeader = () => {
 }
 window.addEventListener('scroll', bgHeader);
 
-// home
-const vfxOverlay = document.querySelector(".home__overlay--vfx"),
-    colorOverlay = document.querySelector(".home__overlay--color"),
-    vfxVideo = document.querySelector("#home-vfx"),
-    homeColor = document.querySelector("#home-color");
-
-
-function playAndPauseVideoByMouseMove(selector, video) {
-    selector.addEventListener("mouseover", () => {
-        video.play();
-    });
-
-    selector.addEventListener("mouseleave", () => {
-        video.pause();
-    });
-}
-
-playAndPauseVideoByMouseMove(vfxOverlay, vfxVideo);
-playAndPauseVideoByMouseMove(colorOverlay, homeColor);
-
 // work
 let swiperFeatured = new Swiper('.work__swiper', {
     loop: true,
@@ -62,64 +42,6 @@ let swiperFeatured = new Swiper('.work__swiper', {
             centeredSlides: false
         },
         1367: {
-            slidesPerView: 3,
-            centeredSlides: false
-        }
-    }
-});
-
-// cover
-const swiperBgImg = document.querySelector(".swiper-bg-img");
-
-var swiperCoverflow = new Swiper(".cover__swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-        rotate: 35,
-        stretch: 10,
-        depth: 50,
-        modifier: 1,
-        slideShadows: false,
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-    }
-});
-
-swiperCoverflow.on('slideChangeTransitionEnd', function (e) {
-    e.slides.forEach(currentSlide => {
-        if (currentSlide.classList.contains("swiper-slide-active")) {
-            swiperBgImg.src = `assets/imgs/projects/${currentSlide.dataset.backgroundImage}`;
-        }
-    });
-});
-
-swiperCoverflow.on('slideChange', function (e) {
-    e.slides.forEach(currentSlide => {
-        if (currentSlide.classList.contains("swiper-slide-active")) {
-            swiperBgImg.src = `assets/imgs/projects/${currentSlide.dataset.backgroundImage}`;
-        }
-    });
-});
-
-// news
-let swiperNews = new Swiper('.news__swiper', {
-    loop: true,
-    spaceBetween: 10,
-    grabCursor: true,
-    slidesPerView: 'auto',
-    centeredSlides: 'auto',
-
-    breakpoints: {
-        650: {
-            slidesPerView: 2,
-            centeredSlides: false
-        },
-        1100: {
             slidesPerView: 3,
             centeredSlides: false
         }
