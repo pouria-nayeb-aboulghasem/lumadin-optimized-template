@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: left;
+            align-items: flex-end;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .swiper-slide::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: -1;
+        }
+
+        .showcase__footer {
+            height: 3rem;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: var(--white-color);
+            opacity: 0.5;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--yellow-color);
+            opacity: 1;
+        }
+
+        .showcase {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .showcase__link {
+            display: block;
+            text-align: center;
+            color: var(--white-color);
+        }
+
+        .img-comp-container {
+            position: relative;
+            height: 400px;
+        }
+
+        .img-comp-img {
+            position: absolute;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .img-comp-img img {
+            width: 350px;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+            border-radius: 12px;
+        }
+
+        .img-comp-slider {
+            position: absolute;
+            z-index: 9;
+            cursor: ew-resize;
+            /*set the appearance of the slider:*/
+            width: 40px;
+            height: 40px;
+            background-color: var(--yellow-color);
+            opacity: 0.7;
+            border-radius: 50%;
+        }
+
+        @media screen and (max-width: 400px) {
+            .img-comp-container {
+                position: relative;
+                height: 300px;
+            }
+
+            .showcase__footer {
+                height: 2.5rem;
+            }
+
+            .img-comp-img img {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header" id="header">
+
+        <!-- desktop menu -->
+        <div class="menu" id="menu">
+            <div class="menu__container container">
+                <div class="menu__content">
+
+                    <a asp-controller="Home" asp-action="Index" class="menu__logo">Lumadin</a>
+
+                    <ul class="menu__row grid menu__row--lg">
+                        <li class="menu__col menu__col--1">
+                            <section class="menu__data">
+                                <h5>General</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">About</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Contact us</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Signup/Signin</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--2">
+                            <section class="menu__data">
+                                <h5>Color</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Color</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--3">
+                            <section class="menu__data">
+                                <h5>VFX</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">VFX</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--4">
+                            <section class="menu__data">
+                                <h5>Tools</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Market</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Education</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+
+                        <li class="menu__col menu__col--5">
+                            <section class="menu__data">
+                                <h5>Design</h5>
+
+                                <nav class="manu__nav">
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">StoryBoard</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">StoryReels</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">AI</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">Articles</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </li>
+                    </ul>
+
+                    <div class="menu__toggle">
+                        <i class="ri-layout-grid-fill" id="menu-icon"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- mobile menu -->
+    <ul class="menu__row grid menu__row--sm">
+        <li class="menu__col menu__col--1">
+            <section class="menu__data">
+                <h5>Lumadin Inc.</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--2">
+            <section class="menu__data">
+                <h5>TV</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">color</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Color</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--3">
+            <section class="menu__data">
+                <h5>Feature film</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Film production</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Behind the scenes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--4">
+            <section class="menu__data">
+                <h5>Advertisement</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Clips</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Character and logo design</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Motion graphics</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+
+        <li class="menu__col menu__col--5">
+            <section class="menu__data">
+                <h5>Cooperation</h5>
+
+                <nav class="manu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Hiring</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </li>
+    </ul>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/hard-shell-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/khatoon-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/animation-cover-1.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/production.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/world-war-iii-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide"
+                style="background-image: url(./assets/imgs/projects/when-the-moon-was-full-bg.jpg);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/world-war-iii-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/hard-shell-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/world-war-iii-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/hard-shell-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/zolf-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(./assets/imgs/projects/world-war-iii-bg.webp);">
+                <div class="showcase">
+                    <header class="showcase__header">
+                        <h3>
+                            <a href="/" class="showcase__link">Movie Name</a>
+                        </h3>
+                    </header>
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <img src="assets/imgs/projects/advertisement.webp">
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <img src="assets/imgs/projects/education.webp">
+                        </div>
+                    </div>
+                    <footer class="showcase__footer"></footer>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            allowTouchMove: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <script>
+        function initComparisons() {
+            var x, i;
+            /* Find all elements with an "overlay" class: */
+            x = document.getElementsByClassName("img-comp-overlay");
+            for (i = 0; i < x.length; i++) {
+                /* Once for each "overlay" element:
+                pass the "overlay" element as a parameter when executing the compareImages function: */
+                compareImages(x[i]);
+            }
+            function compareImages(img) {
+                var slider, img, clicked = 0, w, h;
+                /* Get the width and height of the img element */
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                /* Set the width of the img element to 50%: */
+                img.style.width = (w / 2) + "px";
+                /* Create slider: */
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider");
+                /* Insert slider */
+                img.parentElement.insertBefore(slider, img);
+                /* Position the slider in the middle: */
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                /* Execute a function when the mouse button is pressed: */
+                slider.addEventListener("mousedown", slideReady);
+                /* And another function when the mouse button is released: */
+                window.addEventListener("mouseup", slideFinish);
+                /* Or touched (for touch screens: */
+                slider.addEventListener("touchstart", slideReady);
+                /* And released (for touch screens: */
+                window.addEventListener("touchend", slideFinish);
+                function slideReady(e) {
+                    /* Prevent any other actions that may occur when moving over the image: */
+                    e.preventDefault();
+                    /* The slider is now clicked and ready to move: */
+                    clicked = 1;
+                    /* Execute a function when the slider is moved: */
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                }
+                function slideFinish() {
+                    /* The slider is no longer clicked: */
+                    clicked = 0;
+                }
+                function slideMove(e) {
+                    var pos;
+                    /* If the slider is no longer clicked, exit this function: */
+                    if (clicked == 0) return false;
+                    /* Get the cursor's x position: */
+                    pos = getCursorPos(e)
+                    /* Prevent the slider from being positioned outside the image: */
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    /* Execute a function that will resize the overlay image according to the cursor: */
+                    slide(pos);
+                }
+                function getCursorPos(e) {
+                    var a, x = 0;
+                    e = (e.changedTouches) ? e.changedTouches[0] : e;
+                    /* Get the x positions of the image: */
+                    a = img.getBoundingClientRect();
+                    /* Calculate the cursor's x coordinate, relative to the image: */
+                    x = e.pageX - a.left;
+                    /* Consider any page scrolling: */
+                    x = x - window.pageXOffset;
+                    return x;
+                }
+                function slide(x) {
+                    /* Resize the image: */
+                    img.style.width = x + "px";
+                    /* Position the slider: */
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+            }
+        }
+
+        initComparisons();
+    </script>
+</body>
+
+</html>
